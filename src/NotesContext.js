@@ -5,7 +5,7 @@ import { useLocalStore } from 'mobx-react'  // make Notes Store observable
 const NotesContext = React.createContext(null) // this context has a Provider and Consumer
 
 export const NotesProvider = ({children}) => {
-    const notesStore = useLocalStore(createNotesStore())
+    const notesStore = useLocalStore(createNotesStore)
 
     return <NotesContext.Provider value={notesStore}>
         {children}
